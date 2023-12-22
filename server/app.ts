@@ -22,16 +22,16 @@ app.use(
     // createContext,
   })
 );
-app.get('/', (req, res) => {
-  res.send({
-    message: 'started my project'
-  });
-});
-// app.use(express.static(path.join(__dirname, '../client')));
-
-// app.get('*', (req, res) => {
-//   res.sendFile(path.join(__dirname, '../client/index.html'));
+// app.get('/', (req, res) => {
+//   res.send({
+//     message: 'started my project'
+//   });
 // });
+app.use(express.static(path.join(__dirname, '../client')));
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../client/index.html'));
+});
 app.listen(process?.env?.PORT ?? 3301, () => {
   console.log('listening on 3301' + process?.env?.PORT ?? 3301);
 });
