@@ -7,7 +7,7 @@ generator client {
 
 datasource db {
   provider = "mongodb"
-  url      = env("mongodb+srv://vanessamitelman:van9191219@cluster0.y0qrlsm.mongodb.net/firstDB?retryWrites=true&w=majority")
+  url      = "mongodb+srv://vanessamitelman:van9191219@cluster0.y0qrlsm.mongodb.net/firstDB?retryWrites=true&w=majority"
 }
 
 model Post {
